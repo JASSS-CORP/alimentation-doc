@@ -7,6 +7,8 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-tslint",
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     {
@@ -24,6 +26,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
+    }
   ],
 };
