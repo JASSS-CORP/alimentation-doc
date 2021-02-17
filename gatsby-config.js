@@ -19,13 +19,15 @@ module.exports = {
       },
       __key: "images",
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: "markdown",
+        path: `${__dirname}/src/markdowns/`,
       },
-      __key: "pages",
-    }
+      
+    },
+    `gatsby-transformer-remark`,
   ],
 };
