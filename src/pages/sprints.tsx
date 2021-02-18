@@ -10,7 +10,7 @@ export default function SprintPage()
     const { allMarkdownRemark } = useStaticQuery(
         graphql`
           query {
-            allMarkdownRemark (filter: {frontmatter: {type: {eq: "sprint"}}}) {
+            allMarkdownRemark (filter: {frontmatter: {type: {eq: "sprint"}}}, sort: {fields : [frontmatter___date], order: DESC}) {
               edges {
                 node {
                   frontmatter {

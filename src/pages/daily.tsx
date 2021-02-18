@@ -4,13 +4,12 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import styles from '../styles/pages/Daily.module.scss'
 
 
-export default function DailyPage()
-{
+export default function DailyPage() {
 
     const { allMarkdownRemark } = useStaticQuery(
         graphql`
           query {
-            allMarkdownRemark (filter: {frontmatter: {type: {eq: "daily"}}}) {
+            allMarkdownRemark (filter: {frontmatter: {type: {eq: "daily"}}}, sort: {fields : [frontmatter___date], order: DESC}) {
               edges {
                 node {
                   frontmatter {
@@ -23,26 +22,26 @@ export default function DailyPage()
             }
           }
         `
-      )
+    )
     return (
         <Layout>
-            <div className = {styles.list_container}>
+            <div className={styles.list_container}>
                 <h1>Our Daily Meetings: </h1>
                 <ul>
 
-                {
-                    allMarkdownRemark.edges && allMarkdownRemark.edges.map((item, i)=>{
-                        let meeting = item.node.frontmatter
-                        return (
-                            <li key={"link"+i}>
-                                <Link to={meeting.path}>
-                                    Day {meeting.day}:
-                                    <span className = {styles.meeting_date}>{meeting.date}</span>
-                                </Link>
-                            </li>
-                        )
-                    })
-                }
+                    {
+                        allMarkdownRemark.edges && allMarkdownRemark.edges.map((item, i) => {
+                            let meeting = item.node.frontmatter
+                            return (
+                                <li key={"link" + i}>
+                                    <Link to={meeting.path}>
+                                        Day {meeting.day}:
+                                    <span className={styles.meeting_date}>{meeting.date}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
             </div>
         </Layout>
