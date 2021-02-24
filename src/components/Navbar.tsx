@@ -12,7 +12,7 @@ export default function Navbar() {
                     <div className={styles.left_elements}>
                         <h1 className={styles.header}>
                             <Link to="/">
-                                Alimentation
+                                Jasss, Corp.
                             </Link>
                         </h1>
                     </div>
@@ -35,9 +35,7 @@ export default function Navbar() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/github'>
-                                    Github
-                                </Link>
+                                <a href="https://github.com/JASSS-CORP">Github</a>
                             </li>
                             <li>
                                 <Link to='/docs'>
