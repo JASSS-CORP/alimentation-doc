@@ -38,9 +38,7 @@ export default function Navbar() {
                                 <a href="https://github.com/JASSS-CORP">Github</a>
                             </li>
                             <li>
-                                <Link to='/docs'>
-                                    Documentation
-                                </Link>
+                                <a href="https://drive.google.com/file/d/1iFbxSoUVxaKIWKc2NYU4IA1kUAv-m_ZK/view?usp=sharing">Documentation</a>
                             </li>
                             <li>
                                 <Link to='/report'>
