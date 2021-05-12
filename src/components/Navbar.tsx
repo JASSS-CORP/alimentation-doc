@@ -41,9 +41,7 @@ export default function Navbar() {
                                 <a href="https://drive.google.com/file/d/1iFbxSoUVxaKIWKc2NYU4IA1kUAv-m_ZK/view?usp=sharing">Documentation</a>
                             </li>
                             <li>
-                                <Link to='/report'>
-                                    Report
-                                </Link>
+                                <a href="https://docs.google.com/document/d/124KkSmFfBRV1IDOjNGiARey3lDr-DzLG0s3DMw0fqQ8/edit?usp=sharing">Report</a>
                             </li>
                         </ul>
                     </div>
